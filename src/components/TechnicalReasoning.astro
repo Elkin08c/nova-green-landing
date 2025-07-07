@@ -1,0 +1,280 @@
+---
+
+---
+
+<section class="py-20 bg-gray-900 text-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12">Razonamiento Técnico</h2>
+
+      <div class="technical-content space-y-8">
+        <div
+          class="reasoning-card bg-gray-800 rounded-lg p-8 border-l-4 border-green-500"
+        >
+          <h3 class="text-2xl font-bold mb-4 text-green-400">
+            Contexto del Proyecto
+          </h3>
+          <p class="text-gray-300 leading-relaxed">
+            Imagina que esta landing es parte de una plataforma donde creadores
+            gastronómicos (foodies o influencers) suben sus videos de reseñas. A
+            continuación, explico cómo desarrollaría esta funcionalidad:
+          </p>
+        </div>
+
+        <div
+          class="reasoning-card bg-gray-800 rounded-lg p-8 border-l-4 border-blue-500"
+        >
+          <h3 class="text-2xl font-bold mb-4 text-blue-400">
+            Tecnologías Propuestas
+          </h3>
+          <div class="space-y-4">
+            <div class="tech-item">
+              <h4 class="text-lg font-semibold text-white mb-2">Frontend</h4>
+              <p class="text-gray-300">
+                <strong>Next.js 14</strong> con App Router para una SPA moderna,
+                <strong>TypeScript</strong> para type safety,
+                <strong>Tailwind CSS</strong> para estilos, y <strong
+                  >Framer Motion</strong
+                > para animaciones fluidas.
+              </p>
+            </div>
+
+            <div class="tech-item">
+              <h4 class="text-lg font-semibold text-white mb-2">Backend</h4>
+              <p class="text-gray-300">
+                <strong>Node.js</strong> con <strong>Express</strong> o <strong
+                  >Fastify</strong
+                >, <strong>PostgreSQL</strong> como base de datos principal,
+                <strong>Redis</strong> para caché, y <strong>Socket.io</strong> para
+                funcionalidades en tiempo real.
+              </p>
+            </div>
+
+            <div class="tech-item">
+              <h4 class="text-lg font-semibold text-white mb-2">
+                Servicios en la Nube
+              </h4>
+              <p class="text-gray-300">
+                <strong>AWS S3</strong> para almacenamiento de videos, <strong
+                  >CloudFront</strong
+                > para CDN,
+                <strong>AWS Lambda</strong> para procesamiento de videos, y <strong
+                  >Vercel</strong
+                > para deployment del frontend.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="reasoning-card bg-gray-800 rounded-lg p-8 border-l-4 border-purple-500"
+        >
+          <h3 class="text-2xl font-bold mb-4 text-purple-400">
+            Estructura del Proyecto
+          </h3>
+          <div class="space-y-4">
+            <div class="structure-item">
+              <h4 class="text-lg font-semibold text-white mb-2">
+                Arquitectura de Microservicios
+              </h4>
+              <ul class="text-gray-300 space-y-2 pl-4">
+                <li>
+                  • <strong>User Service:</strong> Gestión de usuarios y autenticación
+                </li>
+                <li>
+                  • <strong>Content Service:</strong> Manejo de videos y metadatos
+                </li>
+                <li>
+                  • <strong>Review Service:</strong> Sistema de reseñas y calificaciones
+                </li>
+                <li>
+                  • <strong>Notification Service:</strong> Notificaciones push y
+                  email
+                </li>
+              </ul>
+            </div>
+
+            <div class="structure-item">
+              <h4 class="text-lg font-semibold text-white mb-2">
+                Base de Datos
+              </h4>
+              <p class="text-gray-300">
+                Estructura con tablas para <strong>users</strong>, <strong
+                  >videos</strong
+                >, <strong>reviews</strong>,
+                <strong>categories</strong>, y <strong>interactions</strong>,
+                con relaciones bien definidas e índices optimizados.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="reasoning-card bg-gray-800 rounded-lg p-8 border-l-4 border-yellow-500"
+        >
+          <h3 class="text-2xl font-bold mb-4 text-yellow-400">
+            Experiencia de Usuario
+          </h3>
+          <div class="space-y-4">
+            <div class="ux-item">
+              <h4 class="text-lg font-semibold text-white mb-2">
+                Funcionalidades Clave
+              </h4>
+              <ul class="text-gray-300 space-y-2 pl-4">
+                <li>
+                  • <strong>Carga progresiva:</strong> Videos que se cargan mientras
+                  el usuario navega
+                </li>
+                <li>
+                  • <strong>Búsqueda inteligente:</strong> Filtros por categoría,
+                  ubicación, rating
+                </li>
+                <li>
+                  • <strong>Recomendaciones:</strong> Algoritmo ML para sugerir contenido
+                  personalizado
+                </li>
+                <li>
+                  • <strong>Interacciones sociales:</strong> Like, comentarios, compartir,
+                  seguir
+                </li>
+              </ul>
+            </div>
+
+            <div class="ux-item">
+              <h4 class="text-lg font-semibold text-white mb-2">
+                Optimizaciones
+              </h4>
+              <ul class="text-gray-300 space-y-2 pl-4">
+                <li>
+                  • <strong>Lazy loading:</strong> Para mejorar tiempo de carga inicial
+                </li>
+                <li>
+                  • <strong>Compresión de videos:</strong> Múltiples resoluciones
+                  adaptativas
+                </li>
+                <li>
+                  • <strong>PWA:</strong> Funcionalidad offline y instalación en
+                  móvil
+                </li>
+                <li>
+                  • <strong>Analytics:</strong> Tracking de engagement y métricas
+                  de usuario
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .technical-content {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .reasoning-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUpFade 0.8s ease-out forwards;
+  }
+
+  .reasoning-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .reasoning-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .reasoning-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .reasoning-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUpFade {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .reasoning-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      transparent,
+      rgba(255, 255, 255, 0.02),
+      transparent
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+  }
+
+  .reasoning-card:hover::before {
+    transform: translateX(100%);
+  }
+
+  .reasoning-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .reasoning-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .tech-item,
+  .structure-item,
+  .ux-item {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .tech-item::after,
+  .structure-item::after,
+  .ux-item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, currentColor, transparent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .tech-item:hover::after,
+  .structure-item:hover::after,
+  .ux-item:hover::after {
+    transform: scaleX(1);
+  }
+
+  .tech-item,
+  .structure-item,
+  .ux-item {
+    position: relative;
+  }
+</style>

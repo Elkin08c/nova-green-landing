@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
+import Features from "../components/Features.astro";
+import TechnicalReasoning from "../components/TechnicalReasoning.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Nova Green - Soluciones Sostenibles">
+  <main>
+    <Header />
+    <Hero />
+    <Services />
+    <Features />
+    <TechnicalReasoning />
+    <Footer />
+  </main>
+</Layout>
+
+<style>
+  main {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<script>
+  // Smooth scrolling for navigation links
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('a[href^="#"]');
+
+    links.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector("href");
+        if (target) {
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      });
+    });
+  });
+
+  // Intersection Observer for animations
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.1,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-in");
+      }
+    });
+  }, observerOptions);
+
+  // Observe all sections
+  const sections = document.querySelectorAll("section");
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+</script>

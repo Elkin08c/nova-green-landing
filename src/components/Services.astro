@@ -1,0 +1,130 @@
+---
+---
+
+<section id="servicios" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Nuestros Servicios</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Ofrecemos soluciones integrales para el cuidado del medio ambiente
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Quienes Somos -->
+      <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+        <div class="service-icon mb-6">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Quienes Somos</h3>
+        <p class="text-gray-600">
+          Somos un equipo comprometido con el desarrollo sostenible y la preservación del medio ambiente.
+        </p>
+      </div>
+      
+      <!-- Certificaciones -->
+      <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+        <div class="service-icon mb-6">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Certificaciones</h3>
+        <p class="text-gray-600">
+          Contamos con certificaciones internacionales que avalan nuestro compromiso con la calidad.
+        </p>
+      </div>
+      
+      <!-- Capacitaciones -->
+      <div class="service-card bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+        <div class="service-icon mb-6">
+          <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+            </svg>
+          </div>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Capacitaciones</h3>
+        <p class="text-gray-600">
+          Brindamos programas de capacitación para empresas y organizaciones en sostenibilidad.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .service-card {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .service-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .service-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .service-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes slideUp {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #10b981, #3b82f6, #8b5cf6);
+    border-radius: 2px 2px 0 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  .service-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-icon {
+    animation: bounceIn 0.6s ease-out 0.3s both;
+  }
+
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+</style>
